@@ -1,0 +1,44 @@
+<div class="card card_comparison">
+    <div class="inner">
+
+        <div class="header">
+
+            <div class="category_image">
+                <img src="https://s3.amazonaws.com/static.samegrain.com/img/categories/{{d.category.get('name').toLowerCase()}}.png">
+            </div>
+
+            <div class="name">
+                {{d.category.get('name')}}
+            </div>
+
+        </div>
+
+        <div class="comparison">
+            <div class="comparison-text">
+
+                <% _.each(d.comparison.models, function(model) { %>
+                    
+                    <% _.each(model.get('shared_answers'), function(answer) { %>
+                    
+                        <span class="common-grain">
+                            <b>
+                            <% if (! d.first) { %>
+                                -
+                            <% }
+                               d.first = false;
+                            %>
+                            </b>
+                            
+                            {{answer.text}}
+                        </span>
+
+                    <% }); %>
+                
+                <% }); %>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+

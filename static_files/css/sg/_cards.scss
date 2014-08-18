@@ -1,0 +1,99 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/****** Cards ******/
+
+#cards {
+    position: relative; /* required by wookmark */
+}
+
+.card {
+    float: left;
+    border: 3px solid #9a9997;
+    border-radius: 8px;
+    margin: 5px;
+    width: #{$card_width}px;
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    /*background-color: #F2F4E9;*/
+    background-color: rgba(242, 244, 233, .5);
+}
+
+/* Wide card that spans two columns */
+.card.doublewide {
+    width: 2*$card_width + 28px;
+}
+
+
+/* This plumps the card under the mouse */
+/* Disabled
+.cards .card:hover {
+    transform: scale(1.05,1.05);
+    -moz-transform: scale(1.05,1.05);
+    -webkit-transform: scale(1.05,1.05);
+    -ms-transform: scale(1.05,1.05);
+    -o-transform: scale(1.05,1.05);
+    transition: .025s ease-out;
+    -moz-transition: .025s ease-out;
+    -webkit-transition: .025s ease-out;
+    -ms-transition: .025s ease-out;
+    -o-transition: .025s ease-out;
+    z-index: 100;
+}
+*/
+
+.card:hover {
+    border-color: white;
+}
+
+.card .console {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.card .inner {
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 1.0);
+    overflow: hidden;
+}
+
+.card .timestamp {
+    float: right;
+    position: relative;
+    top: -($small_image_height/2.0 - 3)px;
+    text-align: right;
+    font-style: italic;
+    font-size: 10px;
+    color: #666;
+    margin-right: 25px;
+}
+
+.card .load_more {
+    font-size: 110%;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    margin-bottom: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 2%;
+    border-radius: 4%;
+}
+
+.card .scroller {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.card .add_to_thread .msg {
+    overflow: hidden;
+    float: right;
+    width: 70%;
+    margin-right: 2%;
+}
+
+.card .add_to_thread img {
+    float: left;
+    width: 16%;
+    margin-left: 4%;
+    margin-top: 1%;
+}

@@ -1,0 +1,24 @@
+<div class="tutorial">
+    <div class="cards">
+        <div class="column"></div>
+    </div>
+
+    <div class="tutorial-column">
+        <div class="tutorial-panel">
+
+            <div id="tutorial-image">
+                <div id="slide_sprite" class="s1"></div>
+
+                <div id="next-div"></div>
+                <% _.each( _.range(1, d.totalSteps + 1), function(i) { %>
+                    <div class="circle-div" id="circle-{{i}}" data-step="{{i}}"></div>
+                <% }); %>
+            </div>
+        </div>
+
+        <div class="tutorial-aux">
+            <div id="aux_sprite"></div>
+        </div>
+    </div>
+</div>
+

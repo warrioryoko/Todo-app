@@ -1,0 +1,102 @@
+<% /*
+Renders the user console view, with picture above, match score, name, and
+buttons underneath.
+
+Score is the match score to the other user.
+
+Disable is a list of buttons which should be disabled.
+
+Context variables:
+is_me, user, disable: [], auto_accept_plant: false, size: 'large',
+camera: false
+*/ %>
+
+<div class="console {{d.size}}"
+data-username="{{{d.user.username}}}"
+data-id="{{d.user.id}}">
+
+<div class="console-crop {{d.size}}">
+    <img src="{{d.user.image}}"/>
+
+    <div class="comparison">
+        <div class="comparison-text">
+            <%  if ( d.user.shared_answers.length > 0 ) {  %>
+                <span class="common-grain">
+                    {{ d.user.shared_answers[0].text }}
+                </span>
+                <%  _.each(_.rest(d.user.shared_answers, 1), function(answer) {  %>
+                    <span class="common-grain">
+                        <b>-</b> {{answer.text}}
+                    </span>
+                <%  });  %>
+            <%  } %>
+        </div>
+    </div>
+
+<div class="console-buttons {{d.size}}">
+
+<%  if ( !d.is_me ) {
+        _.each(d.items, function(e) {
+            capitalized=e.charAt(0).toUpperCase() + e.slice(1, e.length);
+%>
+
+    <div style="cursor: pointer" class="{{e}}-button" data-other-username="{{{d.user.username}}}" data-other-user-id="{{d.user.id}}" data-auto-accept="{{d.auto_accept_plant}}">
+
+        <div class="console-button {{d.size}} console-button-{{e}} enabled" data-action="{{e}}" title="{{{capitalized}}} {{{d.user.username}}}">
+
+            <div class="slider-parent"><!--
+                --><img class = "slider-image" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-{{e}}_s6.png"/><!--
+            --></div><!--
+            --><img class="main-image" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-{{e}}_s1.png"/>
+
+        </div>
+
+        <div class="{{e}}-images" style="display: none">
+            <img class="s1" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-{{e}}_s1.png"/>
+            <img class="s5" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-{{e}}_s5.png"/>
+            <img class="s6" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-{{e}}_s6.png"/>
+        </div>
+
+    </div>
+<%  }); }  %>
+
+<%  if ( (d.is_me) && (d.camera) ) {  %>
+
+    <div class = "console-button {{d.size}} console-button-camera enabled camera-button" style="visibility: visible; cursor: pointer; overflow: visible;">
+        <div class = "slider-parent"></div>
+        <img class = "main-image" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-camera_s1.png"/>
+    </div>
+
+    <div class="camera-images" style="display: none">
+            <img class="s1" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-camera_s1.png"/>
+            <img class="s5" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-camera_s5.png"/>
+            <img class="s6" alt="" src="https://s3.amazonaws.com/static.samegrain.com/img/newconsole/icon-camera_s6.png"/>
+    </div>
+
+<%  }  %>
+
+<div style="clear: left;"></div>
+
+    </div> <!-- End of console-buttons -->
+</div> <!-- End of console-crop -->
+<div class="console-score {{d.size}}">
+
+    <div class="ui green progress" style="display: block;">
+        <div class="bar" style="width: {{d.score}}%;"></div>
+    </div>
+
+    <%  if ( !d.is_me ) {  %>
+            <a class="username profile_link" href="#profile/{{d.user.id}}">
+    <%  }
+        else {  %>
+            <a class="username profile_link" href="#myprofile">
+    <%  }  %>
+
+        <div>{{{d.user.username}}}</div>
+
+    </a>
+
+</div>
+<div style="clear: left;"></div>
+</div>
+

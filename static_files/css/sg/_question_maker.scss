@@ -1,0 +1,91 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/***** Question Maker static*****/
+
+.question-maker {
+    overflow: auto;
+    padding-left: 25px;
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/misc/gray_grain_background.png');
+}
+
+.question-maker .question-pane {
+    float: left;
+}
+
+.question-maker .question-pane * {
+    background-color: white;
+} 
+
+.question-maker .buttons {
+    width: 500px;
+    overflow: auto;
+}
+
+.question-maker .add {
+    float: left;
+    width: 150px;
+}
+
+.question-maker .download-div {
+    float: left;
+    clear: right;
+}
+
+.question-maker .editor-pane {
+    float: left;
+}
+
+.question-maker .question-pane .existing-questions {
+    margin-top: 10px;
+    width: 400px;
+    height: 450px;
+    overflow: scroll;
+    background-color: #EEE;
+    clear: left;
+}
+
+.question-maker .question-pane .existing-questions .question {
+    margin: 5%;
+}
+
+.question-maker .question-pane .question {
+    cursor: pointer;
+}
+
+.question-editor .preview {
+    float: left;
+    width: 250px;
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.question-editor form {
+    float: left;
+    width: 300px;
+}
+
+.editor-pane form {
+    background-color: white;
+    margin-left: 50px;
+}
+
+.editor-pane form * {
+    margin-left: 5%;
+}
+
+.question-editor label {
+    float: left;
+    width: 70px;
+}
+
+.question-editor .buttons {
+    margin-left: 50px;
+}
+
+.question-editor .buttons .apply {
+    float: left;
+    width: 80px;
+}
+
+.question-editor .buttons .delete {
+    float: left;
+}

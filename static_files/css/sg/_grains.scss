@@ -1,0 +1,64 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/***** Tiles and Grains *****/
+
+.tile {
+    margin: 10px;
+    display: none;
+    float: left;
+    width: 400px;
+    position: absolute;
+}
+.grain {
+    line-height: 16pt;
+    cursor: pointer;
+    color: #5e5b48;
+}
+.grain.grain-bold {
+    font-size: 13pt;
+    font-weight: bold;
+    color: #{$dark_green};
+    cursor: pointer;
+}
+.grain.grain-ghost {
+    font-size: 10pt;
+    cursor: pointer;
+    color: #aeada3;
+}
+
+.grain img {
+    position: relative;
+    top: 5px;
+}
+
+.card.card_question .inner {
+    background-color: #{$color5_pale};
+    color: #5e5b48;
+}
+
+
+.card.card_question .tile {
+    margin: 0px;
+    display: block;
+    float: none;
+    width: auto;
+    position: static;
+}
+
+.card.card_question .grainsearch {
+    width: #{$card_width - 30}px;
+}
+
+.card.card_question .prompt {
+    background-color: #{$dark_green};
+    color: white;
+    padding: 3px 6px 3px 6px;;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+.card.card_question .question {
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    overflow: auto;
+}

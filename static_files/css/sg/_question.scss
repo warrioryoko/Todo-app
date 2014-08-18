@@ -1,0 +1,84 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/**** Individual Question Styles ****/
+
+.QTYPE_IMAGE_MULTIPLE_SELECTION .choices, .QTYPE_IMAGE_SINGLE_SELECTION .choices {
+    overflow: auto;
+}
+.QTYPE_IMAGE_MULTIPLE_SELECTION .choice, .QTYPE_IMAGE_SINGLE_SELECTION .choice {
+    overflow: auto;
+}
+.QTYPE_IMAGE_MULTIPLE_SELECTION .image, .QTYPE_IMAGE_SINGLE_SELECTION .image {
+    float: left;
+    width: 100px;
+    clear: left;
+}
+.QTYPE_IMAGE_MULTIPLE_SELECTION .image img, .QTYPE_IMAGE_SINGLE_SELECTION .image img {
+    width: 100px;
+}
+.QTYPE_IMAGE_MULTIPLE_SELECTION .text, .QTYPE_IMAGE_SINGLE_SELECTION .text {
+    float: left;
+    width: 80px;
+    clear: right;
+    margin-left: 1em;
+    margin-top: .5em;
+}
+.QTYPE_IMAGE_MULTIPLE_SELECTION .choice.selected, .QTYPE_IMAGE_SINGLE_SELECTION .choice.selected {
+    background-color: #{$dark_green};
+    color: #FFF;
+}
+
+.QTYPE_VERTICAL_SLIDER .sliderdiv {
+    float: left;
+    clear: left;
+    width: 30px;
+    padding-left: 15px;
+}
+.QTYPE_VERTICAL_SLIDER .choices {
+    float: left;
+    clear: right;
+    width: 130px;
+    overflow: auto;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .left-arrow {
+    float: left;
+    padding-top: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .right-arrow {
+    float: left;
+    padding-top: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .left-arrow img {
+    width: 25px;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .right-arrow img {
+    width: 25px;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .viewport {
+    float: left;
+    width: #{$card_width - 60}px;
+    height: #{$card_width}px;
+    overflow: hidden;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .choices {
+    width: 2000px;
+    overflow: auto;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .choices .choice {
+    float: left;
+    width: #{$card_width - 60}px;
+}
+
+.QTYPE_IMAGE_HORIZONTAL_SCROLL .choices .choice img {
+    width: #{$card_width - 60}px;
+}

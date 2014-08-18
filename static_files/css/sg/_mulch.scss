@@ -1,0 +1,16 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/********** Mulch static**********/
+
+.mulchpile {
+    width: 1024px;
+    overflow: auto;
+}
+
+.mulch-entry {
+    border: 1px solid #AAA;
+    margin: 20px;
+    float: left;
+    -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}

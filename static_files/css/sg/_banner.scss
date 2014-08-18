@@ -1,0 +1,27 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/***** Notification Banner *****/
+
+.banner {
+    width: 3*($card_width + 11)px;
+    color: #000;
+    background-color: #ffffff;
+    border-color: rgb(159, 195, 37);
+    border-width: 3px;
+    border-radius: 10px;
+    border-style: solid;
+    margin: 5px;
+}
+
+.banner:hover {
+    border-color: white;
+}
+
+.banner .button {
+    margin: 3px;
+    float: right;
+    cursor: pointer;
+}
+
+.banner .text {
+    padding: 15px;
+}

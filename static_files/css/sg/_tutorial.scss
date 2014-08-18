@@ -1,0 +1,69 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/*** Tutorial ***/
+
+.tutorial .tutorial-column {
+    float: left;
+    overflow: auto;
+}
+
+.tutorial .tutorial-panel {
+    margin: 6px;
+    max-height: 420px;
+    overflow: hidden;
+}
+
+.tutorial .tutorial-aux {
+    margin-left: 6px;
+}
+
+#next-div {
+    position: relative;
+    top: -57px;
+    left: 460px;
+    width: 125px;
+    height: 40px;
+    cursor: pointer;
+    background: rgba(0,0,0,0);
+}
+
+.circle-div {
+    position: relative;
+    top: #{$circle_top}px;
+    left: #{$circle_left}px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background: rgba(0,0,0,0);
+}
+
+.s6, .s5, .s4, .s3, .s2, .s1 {
+    background-image: url(/static/img/tutorial/slidesprite.png);
+    background-repeat: no-repeat;
+}
+.s6 { background-position: 0px 0px; width:604px; height:396px; }
+.s5 { background-position: -604px 0px; width:604px; height:396px; }
+.s4 { background-position: 0px -396px; width:604px; height:396px; }
+.s3 { background-position: -604px -396px; width:604px; height:396px; }
+.s2 { background-position: 0px -792px; width:604px; height:396px; }
+.s1 { background-position: -604px -792px; width:604px; height:396px; }
+
+.aux4, .aux5, .aux3 {
+    background-image: url(/static/img/tutorial/auxsprite.png);
+    background-repeat: no-repeat;
+}
+.aux4 { background-position: 0px 0px; width:592px; height:397px; }
+.aux5 { background-position: -592px 0px; width:587px; height:340px; }
+.aux3 { background-position: 0px -397px; width:586px; height:339px; }
+
+@for $i from 2 through $totalSteps+1 {
+
+    $circle_left: $circle_left + 35;
+    $circle_top: $circle_top - 20;
+
+    #circle-#{$i} {
+        left: #{$circle_left}px;
+        top: #{$circle_top}px;
+    }
+
+}
+

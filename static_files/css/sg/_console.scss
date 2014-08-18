@@ -1,0 +1,208 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/******* Console mako******/
+
+.console {
+    margin: 0px;
+    position: relative;
+}
+
+.console > a, .console > img {
+    float: left;
+    margin: 0px;
+}
+
+.console > .console-score {
+    position: relative;
+}
+
+.console-crop.small {
+    width: #{$small_image_width}px;
+    height: #{$small_image_height}px;
+    overflow: hidden;
+    position: relative;
+}
+
+.console-crop.small > img {
+    width: #{$small_image_width}px;
+    position: absolute;
+    /*top: -40%;*/
+}
+
+.console-crop.large {
+    width: #{$card_width}px;
+    height: #{$image_height}px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+}
+
+.console-crop.large > img {
+    width: #{$card_width}px;
+    position: absolute;
+    /*top: -40%;*/
+}
+
+.console-score.small > img {
+    float: left;
+    width: 125px;
+}
+
+.console-score.large > img {
+    float: left;
+    width: #{$card_width}px;
+}
+
+.console-score.small > .username {
+    position: absolute;
+    left: 0em;
+    top: 0px;
+    font: bold 12px/105% Arial, Helvetica, sans-serif ;
+    color: #000;
+    padding: 1px 0px 2px 0px ;
+    margin: 1px 3px 1px 3px ;
+    width: 124px ;
+    height: 10px ;
+}
+
+
+.console-score.large > .username {
+    position: absolute;
+    left: 0em;
+    top: 0px;
+    font: bold 17px/105% Arial, Helvetica, sans-serif ;
+    color: #5f5d46;
+    padding: 2px 0px 0px 0px ;
+    margin: 2px 3px 0px 3px ;
+    margin-top: 2%;
+    width: 100%;
+    cursor: pointer;
+}
+.console-score.large > .username:visited {
+    text-decoration: none;
+}
+.console-score.large > .username:link {
+    text-decoration: none;
+}
+
+
+.console-button.small {
+    float: left;
+    margin: 0 1px 0 0;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    background-size: 30px 30px;
+}
+
+
+.console .console-buttons {
+    position: absolute;
+    top: 0px;
+    margin-left: 3px;
+    margin-right: auto;
+    visibility: hidden;
+    overflow: auto;
+}
+
+.console .console-buttons a img {
+    border: 0px;
+}
+
+.console-button.large {
+    float: right;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    margin-right: 7px;
+    width: #{$button_width}px;
+    height: #{$button_height}px;
+    overflow: hidden;
+}
+
+.slider-parent {
+    width: #{$slider_width}px;
+    height: #{$button_height}px;
+    overflow: hidden;
+    float: left;
+}
+
+.slider-image {
+    margin-right: -#{$slider_width}px;
+    float: right;
+}
+
+.console .console-buttons.large {
+    left: #{$card_width - 88}px;
+}
+
+.console-button.large {
+    margin-top: 3px;
+}
+
+.console-button.large:first-child {
+    margin-top: 7px;
+}
+
+.console-button.large:last-child {
+    margin-bottom: 7px;
+}
+
+.console .console-crop {
+    position: relative;
+}
+
+.console .console-buttons.small {
+    left: #{125 - 32}px;
+}
+
+.console .comparison {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: auto;
+    color: #ffffff;
+    background-color: #000000;
+    opacity: .7;
+    overflow: hidden;
+    padding: 10px;
+    visibility: hidden;
+}
+
+.console.large .comparison {
+    width: #{$card_width - 20}px;
+    height: #{$card_width - 20}px;
+}
+
+.console.small .comparison {
+    width: 125px;
+    height: 125px;
+}
+
+.console .comparison-text {
+    /*font-weight: bold;*/
+    color: #ffffff;
+    position: absolute;
+    left: 0px;
+    margin: 10px;
+    opacity: 1.0;
+}
+
+.console.large .comparison-text {
+    top: 0px;
+    width: #{$card_width - 20}px;
+}
+
+.console.small .comparison-text {
+    top: 0px;
+    width: 125px;
+}
+
+.console .console-crop:hover .console-buttons {
+    visibility: visible;
+}
+
+.console .username div {
+    margin-left: 2%;
+}

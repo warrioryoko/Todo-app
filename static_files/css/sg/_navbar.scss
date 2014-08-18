@@ -1,0 +1,189 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/******** Navigation bar CSS *******/
+
+.navbar {
+    padding: 0px;
+    margin: 0px;
+	margin-left: -4px;
+    height: 82px;
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/header/lg-header-bk-texture1_repeat.png');
+    background-repeat: repeat-x;
+    clear: both;
+    overflow: hidden;
+}
+
+.navbar a img {
+    border: 0;
+}
+
+#white-nav-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.navbar .logo {
+    z-index: 2;
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 21px;
+    padding-right: 17px;
+    padding-top: 12px;
+    padding-bottom: 0px;
+    margin: 0px;
+    height: 43px;
+    width: 200px;
+}
+
+.navbar-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+}
+
+#overlay-background {
+
+    position: absolute;
+    left: 902px;
+    width: 100%;
+    height: 82px;
+    z-index: 99;
+    background-image: url('/static/img/tutorial/navbar_overlay_repeat.png');
+    background-repeat: repeat-x;
+}
+
+.navbuttons {
+    margin: 0px;
+    padding-left: 80px;
+    padding-right: 0px;
+    padding-top: 8px;
+    padding-bottom: 0px;
+    float: left;
+}
+
+.navbutton {
+    float: left;
+    margin-left: 0px;
+    margin-right: 15px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    width: 69px;
+    height: 68px;
+    text-decoration: none;
+    outline: none;
+}
+
+.navbutton .image {
+    width: 69px;
+    height: 68px;
+    margin-top: 3px;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.navbutton .name {
+    position: absolute;
+    top: 60px;
+    width: 69px;
+    text-align: center;
+    font: 11px/105% Arial, Helvetica, sans-serif ;
+    color: #5e5b47;
+}
+
+.navbutton:first-child {
+    margin-right: 25px;
+}
+
+
+/*image specific adjustments*/
+.navbutton.messages .name {
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+.navbutton.grains .name {
+    margin-top: 2px;
+    margin-left: -1px;
+}
+
+.navbutton.seeds .name {
+    margin-top: 2px;
+    margin-left: 4px;
+}
+
+.navbutton.plants .name {
+    margin-top: 2px;
+    margin-left: -1px;
+}
+
+.navbutton.vine .name {
+    margin-top: 2px;
+    margin-left: -2px;
+}
+
+.navbutton.mulch .name {
+    margin-top: 2px;
+    margin-left: 1px;
+}
+
+
+/* Navigation Button icons */
+
+.navbutton.vine .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-vine-sprite.png");
+}
+.navbutton.seeds .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-seed-sprite.png");
+}
+.navbutton.plants .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-plant-sprite.png");
+}
+.navbutton.messages .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-message-sprite.png");
+}
+.navbutton.grains .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-grain-sprite.png");
+}
+.navbutton.mulch .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-mulch-sprite.png");
+}/*
+.navbutton.map .image {
+    background-image: url("https://s3.amazonaws.com/static.samegrain.com/img/header/lg-nav-map-sprite.png");
+}*/
+
+/* Navigation Button icons hover */
+.navbar .image:hover {
+	background-position: 0px -69px;
+}
+
+/* Navigation Button icons */
+.navbar .selected .image {
+    background-position: 0px -138px;
+}
+
+/* Navigation Button icons hover */
+.navbar .selected .image:hover {
+    background-position: 0px -207px;
+}
+
+
+/* Notification indicators next to nav icons */
+.navbutton .circle {
+    width: 16px;
+    height: 16px;
+    color: #FF3B14;
+    text-align: center;
+    font: 9px/105% Arial, Helvetica, sans-serif ;
+}
+.navbutton .circle.invisible {
+    visibility: hidden;
+}
+
+.navbutton .circle_txt {
+    padding: 3px 0 0 0 ;
+    position: relative;
+    top: -4px;
+}

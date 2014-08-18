@@ -1,0 +1,13 @@
+    <div class='radiobuttons'>
+        <% _.each(d.grains, function(grain) {
+            
+               if ( _.contains(grain, d.selected) )
+                   d.checked = ' checked';
+               else
+                   d.checked = '';
+        %>
+            <input type="radio" name="{{d.group}}" value="{{base64.encode(grain).trim()}}" {{d.checked}}>
+            {{grain}}
+            <br/>
+        <% }); %>
+    </div>

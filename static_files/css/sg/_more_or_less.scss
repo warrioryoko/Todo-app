@@ -1,0 +1,45 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/****** More or Less Mechanism static*****/
+
+.more-or-less {
+
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.more-content {
+
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.ellipses {
+    margin-left: 2%;
+    margin-right: 1%;
+}
+
+.more-or-less .more-content {
+    display: none;
+}
+
+.more-or-less .less-button {
+    display: none;
+}
+
+.more-or-less .more-button, .more-or-less .less-button {
+    font-weight: normal;
+    text-decoration:underline;
+    outline: none;
+}
+
+.more-or-less .more-button:visited {
+    text-decoration: none;
+}
+
+.more-or-less .less-button:visited {
+    text-decoration: none;
+}

@@ -1,0 +1,270 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/****** Categories mako******/
+
+.card_category {
+    display: none;
+}
+
+.card.card_category .inner {
+    background-color: $color6_pale;
+}
+
+.card_category .name {
+    font-size: 20px;
+    text-align: center;
+    line-height: 20px;
+    padding: 5px;
+}
+
+.card_category .category_image {
+    width: #{$card_width}px;
+    height: #{$image_height}px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card_category .category_image img {
+    width: #{$card_width}px;
+}
+
+.card_category .ghost {
+    position: absolute;
+    background-color: #AAA;
+    top: 0px;
+    left: 0px;
+    width: #{$card_width}px;
+    height: #{$image_height}px;
+    opacity: .9;
+    visibility: hidden;
+}
+
+.card_category .ghost-text {
+    padding-top: #{$card_width/2 - 30}px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #000;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 1.0;
+}
+
+.card_category .ghost.unselected {
+    visibility: visible;
+}
+
+.card_category .ignore-container {
+    text-align: center;
+    padding: 5px;
+    height: 28px;
+}
+
+.cards.answers {
+    float: left;
+}
+
+.category-column {
+    float: left;
+}
+
+.category-list {
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.category-list .category {
+    clear: both;
+    overflow: auto;
+    float: left;
+    cursor: pointer;
+}
+
+.category-list .category .inner {
+    background-color: #{$dark_green};
+    height: 33px;
+    position: relative;
+    background-repeat: repeat-y;
+}
+
+.category-list .category.progress1 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s1.png');
+}
+.category-list .category.progress2 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s2.png');
+}
+.category-list .category.progress3 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s3.png');
+}
+.category-list .category.progress4 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s4.png');
+}
+.category-list .category.progress5 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s5.png');
+}
+.category-list .category.progress6 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s6.png');
+}
+.category-list .category.progress7 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s7.png');
+}
+.category-list .category.progress8 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s8.png');
+}
+.category-list .category.progress9 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s9.png');
+}
+.category-list .category.progress10 .inner {
+    background-image: url('https://s3.amazonaws.com/static.samegrain.com/img/haker2/progress_s10.png');
+}
+
+.category-list .selectable {
+    float: left;
+    min-height: 40px;
+    width: #{$card_width - 32}px;
+}
+
+.category-list .category.selected .inner {
+    background-color: #ffffff;
+    background-image: none;
+}
+
+.category-list .selectable .image {
+    float: left;
+    margin-top: 3px;
+    margin-left: 3px;
+}
+
+.category-list .selectable .image img {
+    vertical-align: middle;
+}
+
+.category-list .category .category-name {
+    float: left;
+    font-size: 16px;
+    width: #{$card_width - 90}px;
+    padding-top: 8px;
+    padding-left: 8px;
+}
+
+.category-list .category .updown {
+    float: left;
+    width: 30px;
+}
+
+.category-list .category .up, .category .down {
+    padding: 3px;
+    cursor: pointer;
+}
+
+.category-list .up img, .category-list .down img {
+    width: 15px;
+}
+
+.category-list .category .up {
+}
+
+.category-list .category .down {
+    clear: both;
+}
+
+.category-list .category:first-child .up {
+    visibility: hidden;
+}
+
+.category-list .category:last-child .down {
+    visibility: hidden;
+}
+
+.category-return {
+    font-size: 20pt;
+    cursor: pointer;
+    text-align: left;
+}
+
+.category-return img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+.category-return-text {
+    padding: 5px;
+}
+
+.categories {
+    /*background-color: #f6f7f1;*/
+    overflow: auto;
+    margin-top: 12px;
+    float: left;
+}
+
+.topbar .category-menu.menu.dropdown {
+    background-color: #c6c7b9;
+    color: #5e5b48;
+    border-radius: 8px;
+    margin-left: 30px;
+    margin-top: 2px;
+    height: 23px;
+}
+
+.topbar .category-menu.menu.dropdown .name {
+    padding: 4px;
+}
+
+.topbar .category-menu.menu.dropdown .arrow {
+    margin-top: 8px;
+    border-top: 7px solid #5e5b48;
+}
+
+.topbar .category-menu.menu.dropdown ul {
+    position: relative;
+    left: 70px;
+    top: -8px;
+    clear: left;
+}
+
+.answer-tabs {
+    float: left;
+}
+
+.answer-tabs .list {
+    padding: 3px;
+    border-bottom: 1px solid #CCC;
+    width: #{3*($card_width+26)}px;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.answer-tabs .tab {
+    list-style: none;
+    display: inline;
+    margin-left: 12px;
+    border: 1px solid #CCC;
+    border-bottom: none;
+    cursor: pointer;
+    background-color: $color3_pale;
+}
+
+.answer-tabs .tab span {
+    padding: 6px;
+}
+
+.answer-tabs .tab:hover {
+    background-color: #F4ECF4;
+}
+
+.answer-tabs .tab.selected {
+    background-color: #FFF;
+    border-bottom: 3px solid #FFF;
+    font-weight: bold;
+}
+
+#grains-menu {
+    font-size: 150%;
+    margin-left: 15%;
+}
+
+#cards.question-cards {
+    margin-top: 12px;
+    float: left;
+}

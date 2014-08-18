@@ -1,0 +1,75 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/****** Vine ******/
+
+#post_to_vine {
+    width: #{$card_width}px;
+    margin-left: .5%;
+}
+
+.post_promt {
+    background-color: #9FC325;
+    color: #FFF;
+    padding: 3px 6px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+#vine_message {
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+
+#vine_submit {
+    position: relative;
+    left: 70%;
+}
+
+
+.card .vinepost {
+    padding-top: 3%;
+}
+
+.card .vinepost .comment {
+    background-color: #FFF;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card .comments {
+    margin-right: 6px;
+    margin-left: 6px;
+}
+
+.card.card_vine .inner {
+    background-color: #{$color2_pale};
+}
+
+.card.card_vine .message {
+    color: #000;
+    padding-top: 8%;
+    margin-top: 1%;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 2%;
+}
+
+.vp .edit_area .cancelsave {
+    margin-right: 8%;
+}
+
+.vp {
+    margin-bottom: 3%;
+}
+
+.vp .sgactions {
+    margin-right: 5%;
+}

@@ -1,0 +1,409 @@
+<style type="text/css">
+
+#container {
+
+    margin: 15px;
+    min-width: 700px;
+    max-width: 700px;
+    width: 700px;
+    height: 525px;
+    border-radius: 10px;
+    border: 5px solid #d4d5cd;
+    background-color: white;
+}
+
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+
+#left-tab {
+
+    background-color: #deeff6;
+    margin: 1.5%;
+    width: 48%;
+    height: 95%;
+    border-radius: 3%;
+    float: left;
+}
+
+#right-tab {
+
+    width: 49%;
+    height: 95%;
+    margin-top: 4%;
+    float: right;
+}
+
+
+#settingsform {
+
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+#new-password {
+    margin-top: 3%;
+}
+
+.text-input {
+    width: 90%;
+}
+
+.second-form {
+    margin-top: 2%;
+}
+
+.small {
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.large-text {
+
+    font-size: large;
+    margin-bottom: 3%;
+}
+
+.medium-text {
+    font-size: medium;
+}
+.small-text {
+    font-size: 95%;
+}
+.blue-text {
+    color: #2c5362;
+}
+.red-text {
+    color: #fb432b;
+}
+.white-text {
+    color: white;
+}
+.orange-text {
+    color: #e36d09;
+}
+.orange-background {
+    background-color: #e36d09;
+}
+.italic {
+    font-style: italic;
+}
+a {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+
+
+#username-text {
+
+    width: 62%;
+    height: 15px;
+    float: right;
+    margin-right: 8%;
+}
+
+#email-text {
+
+    width: 74%;
+    height: 15px;
+    overflow: auto;
+    float: right;
+    margin-right: 8%;
+}
+
+
+#horiz {
+
+    height: 100px;
+    margin-top: 10%;
+}
+
+#delete {
+
+    margin-left: -3%;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 110%;
+}
+
+#update {
+
+    width: 17%;
+    height: 20%;
+    margin-right: 8%;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    float: right;
+    cursor: pointer;
+    border: 0;
+}
+
+#notification-toggles {
+
+    margin-left: 8%;
+    margin-right: 10%;
+    height: 100%;
+}
+
+.notification-description {
+
+    margin-top: 5%;
+    margin-bottom: 7%;
+    line-height: 125%;
+}
+
+.toggle-description {
+
+    margin-top: 3%;
+    margin-right: 10%;
+    height: 8%;
+}
+
+.toggle-checkbox {
+
+    display: none;
+}
+
+.toggle {
+
+    width: 18%;
+    color: white;
+    border-radius: 8px;
+    height: 50%;
+    cursor: pointer;
+    overflow: hidden;
+    float: right;
+}
+
+.toggle-slider {
+
+    width: 200%;
+}
+
+.toggle-text-yes {
+
+    margin-top: 3%;
+    margin-left: 4%;
+    margin-right: 2%;
+    float: left;
+}
+
+.toggle-text-no {
+
+    margin-top: 3%;
+    margin-right: 5%;
+    float: left;
+}
+
+.toggle-circle {
+
+    margin-right: 5%;
+    margin-left: 3%;
+    margin-top: 4%;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    background-color: white;
+    float: left;
+}
+
+</style>
+</head>
+<body>
+
+<div id="container">
+
+<div id="left-tab">
+
+    <form id="settingsform">
+
+        <label>
+            <p class="large-text blue-text">Username: 
+                <span class="medium-text" id="username-text">{{{d.username}}}</span>
+            </p>
+            <p class="small small-text red-text italic">Select an anonymous name to protect your identity.</p>
+
+        </label>
+
+        <input id="username" class="text-input" type="text" value="" placeholder="Change User Name" name="username"></input>
+
+
+        <label>
+            <p class="large-text blue-text">Email:
+                <span class="medium-text" id="email-text">{{{d.email}}}</span>
+            </p>
+            <p class="small small-text red-text italic">Email addresses are never shown or shared by SameGrain.</p>
+
+        </label>
+
+        <input id="email" class="text-input" type="text" value="" placeholder="Change email address" name="email"></input>
+        <input id="confirm_email" class="text-input second-form" type="text" value="" placeholder="Confirm email address" name="confirm_email"></input>
+
+        <p class="large-text blue-text">Change Password</p>  
+
+        <label>
+            <div><!--Current Password--></div>
+        </label>
+        <input id="current_password" class="text-input" type="password" value="" placeholder="Current Password" name="current_password"></input>
+
+        <label>
+            <div id="new-password"><!--New Password--></div>
+        </label>
+
+        <input id="new_password" class="text-input" type="password" value="" placeholder="New Password" name="new_password"></input>
+        <input id="confirm_new_password" class="text-input second-form" type="password" value="" placeholder="Confirm New Password" name="confirm_new_password"></input>
+
+        <div id="horiz">
+
+        <input id="update" class="orange-background white-text small-text" type="submit" value="Update" name="submit_button"></input>
+
+    </form>
+
+    <form id="delete-form">
+        <input id="delete" class="orange-text" type="submit" value="Delete My Account" name="submit_button"></input>
+    </form>
+
+        </div>
+</div>
+
+
+
+<div id="right-tab">
+
+<div id="notification-toggles">
+
+    <div class="large-text blue-text">Notifications</div>
+
+    <div class="medium-text notification-description">
+        Selecting "Yes" will send you a notification email when one of the following occurs:
+    </div>
+
+    <div class="toggle-description">
+        New Matches
+        <div class="toggle orange-background no-select-children" toggle-description="match_notifications" ischecked="{{{d.match_notifications}}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toggle-description">
+        New Private Messages
+        <div class="toggle orange-background no-select-children" toggle-description="message_notifications" ischecked="{{{d.message_notifications}}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toggle-description">
+        New Plant Requests
+        <div class="toggle orange-background no-select-children" toggle-description="plant_request_notifications" ischecked="{{{d.plant_request_notifications}}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="toggle-description">
+        Plant Request Accepted
+        <div class="toggle orange-background no-select-children" toggle-description="accepted_plant_request_notifications" ischecked="{{{d.accepted_plant_request_notifications}}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+    
+    <div class="toggle-description">
+        Share Location
+        <div class="toggle orange-background no-select-children" toggle-description="share_location" ischecked="{{{d.share_location}}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+
+<%/*
+    <div class="toggle-description">
+        Accepted Plant Requests
+        <div class="toggle orange-background no-select-children" toggle-description="plants" ischecked="{{d.notifications['plants']}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toggle-description">
+        New comments on your posts 
+        <div class="toggle orange-background no-select-children" toggle-description="comments_after_post" ischecked="{{d.notifications['comments_after_post']}}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="toggle-description">
+        New comments on a post you have commented on 
+        <div class="toggle orange-background no-select-children" toggle-description="comments_after_comment" ischecked="${notifications['comments_after_comment']}">
+            <div class="toggle-slider">
+                <div class="toggle-text-yes">YES</div>
+                <div class="toggle-circle"></div>
+                <div class="toggle-text-no">NO</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <p class="large-text blue-text">Facebook</p>
+        Share information on Timeline
+    </div>
+
+    <p class="large-text blue-text">Location</p>
+        Display Location
+   </div>
+
+    </div>
+*/%>
+</div>
+
+</div>
+
+</div>
+
+<div id="confirm-dialog" style="display: none" title="Confirm">
+Are you sure you want to delete your account?
+</div>
+
+</body>

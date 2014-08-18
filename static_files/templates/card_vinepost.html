@@ -1,0 +1,57 @@
+<div id="{{d.id}}" class="card card_vine"">
+    <div class="inner">
+
+        {{d.console}}
+
+        <div class="vinepost">
+
+            <div class="vp">
+
+                <span class="timestamp" id="vp-timestamp">
+                    {{{ d.how_long_ago }}}
+                </span>
+
+                <div class="message">
+                    {{{d.body}}}
+                </div>
+
+                <% if (d.own_vp) { %>
+ 
+                    <div class="sgactions">
+
+                        <a class="edit">Edit</a>
+                        <a class="delete">Delete</a>
+                    
+                    </div>
+                
+                <% } %>
+
+            </div>
+
+            <%/*This outer div makes the scrolling work*/%>
+            <div>
+                <div class="ui comments scroller">
+                    
+                    <% if ( ! d.loaded_all_comments ) { %>
+                        <div class="load_more" style="background-color: rgb(159, 195, 37); color: white;">Load more comments</div>
+                    <% } %>
+
+                    <% _.each(d.comments, function(c) { %>
+                           {{c}}
+                    <% });  %>
+
+                </div>
+            </div>
+
+            <div class="add_to_thread">
+
+                <img class="leaf-border" src="{{d.user_image}}">
+
+                <textarea class="msg" maxlength="1000" placeholder="Post a comment..." rows="2" onKeyPress="return sg.checkSubmit(this, event)"></textarea>
+
+            </div>
+           
+        </div>
+    </div>
+</div>
+

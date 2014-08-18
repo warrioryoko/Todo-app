@@ -1,0 +1,26 @@
+    <div id="{{d.id}}" class="card card_question {{d.qtype}} {{d.answered}}" data-disappear="{{d.disappear}}">
+        <div class="inner">
+            <div class="tile">
+                <div class="grains-tile">
+                    <div class="prompt">
+                        <% if ( d.prompt ) { %>
+                            {{d.prompt}}
+                        <% } else { %>
+                            Select phrases which describe or relate to you.
+                        <% } %> 
+                    </div>
+                    <div class="question">
+                        {{d.card}}
+                    </div>
+                    <center>
+                        <% if (d.skipButton) { %>
+                            <div class="submit skip">
+                                Skip
+                            </div>
+                        <% } %>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+

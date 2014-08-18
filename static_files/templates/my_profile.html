@@ -1,0 +1,92 @@
+<div class="card card_profile">
+
+    <div class="inner">
+
+        {{ d.console }}
+
+        <div>
+
+            <div id="goal_div" class="info">
+
+                <div class="title">SameGrain Goals</div>
+
+                <div class="info_box">
+
+                    <div class="info_text">
+                        <div id="goals_text">{{{ d.goals }}}</div>
+                        <img class="edit_button" data-target="#goal_div" src="https://s3.amazonaws.com/static.samegrain.com/img/misc/edit.png"/>
+                    </div>
+
+                    <div class='edit'>
+                        <textarea id="goals" placeholder="Enter your SameGrain goals" name="goals" maxlength="140"></textarea>
+
+                        <input value="Cancel" class="button_base cancel_button no-select" data-target="#goal_div"></input>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="about_div" class="info">
+
+                <div class="title">About Me</div>
+
+                <div class="info_box">
+
+                    <div class="info_text">
+                        <div id="about_me_text">{{{ d.about_me }}}</div>
+                        <img class="edit_button" data-target="#about_div" src="https://s3.amazonaws.com/static.samegrain.com/img/misc/edit.png"/>
+                    </div>
+
+                    <div class='edit'>
+                        <textarea id="about_me" placeholder="This space allows you to write a little more about yourself." name="about_me" maxlength="140"></textarea>
+
+                        <input value="Cancel" class="button_base cancel_button no-select" data-target="#about_div"></input>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <%/*<div id="bday_div" class="info">
+
+                <div class="title">Birthday</div>
+
+                <div class="info_box">
+
+                    <div class="info_text">
+                        ${(profile_form.birthdate(style="display:none"))}
+
+            			<div id="when"><p>When were you born?</p></div>
+
+						<div id="selectors">
+						    <select id="month">
+						        %for month in profile_form.dates[0]:
+						            <option value="${loop.index+1}">${month}</option>
+						        %endfor
+						    </select>
+
+						    <select id="day">
+						        %for day in profile_form.dates[1]:
+						            <option value="${day}">${day}</option>
+						        %endfor
+						        </select>
+
+						    <select id="year">
+						        %for year in profile_form.dates[2]:
+						            <option value="${year}">${year}</option>
+						        %endfor
+						    </select>
+						</div>
+
+                        <input id="date_cancel" value="Cancel" class="button_base cancel_button no-select" onclick="reset_date()"></input>
+                    </div>
+                </div>
+            </div>*/%>
+
+            <input id="submit_button" class="button_base save_button no-select" type="submit" value="Submit" name="submit_button"></input>
+
+        </div>
+    </div>
+</div>
+

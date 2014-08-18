@@ -1,0 +1,27 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/***** Messages *****/
+
+.card.card_conversation .inner {
+    background-color: rgb(222, 239, 246);
+}
+
+.card_conversation .message {
+    background-color: #FFF;
+    border-color: #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 8px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card_conversation .conversation {
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-top: 6px;
+}

@@ -1,0 +1,35 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/***** Profile Picture Upload static*****/
+
+.profile_pic #container {
+
+    margin: 1%;
+    min-width: 40%;
+    max-width: 40%;
+    width: 40%;
+    border-radius: 10px;
+    border: 5px solid #d4d5cd;
+    background-color: white;
+    padding-right: 1%;
+}
+
+.profile_pic #container * {
+    margin-left: 1%;
+}
+
+.profile_pic #upload {
+}
+
+.profile_pic .image {
+    margin: 1em;
+}
+
+.profile_pic .image img {
+    width: 90%;
+}
+
+.profile_pic .save-button {
+    width: 10em;
+    margin: 1em;
+}
+

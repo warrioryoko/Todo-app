@@ -1,0 +1,32 @@
+<div class="comment message" message-id="{{d.id}}">
+    
+    <a class="avatar">
+        <img src="{{d.user['thumbnail']}}">
+    </a>
+    
+    <div class="content">
+
+        <a class="author">
+            {{{d.user['username']}}}
+        </a>
+        
+        <div class="metadata">
+            <span class="date">{{ d.how_long_ago }}</span>
+        </div>
+    
+        <div class="text">
+            {{{d.body}}}
+        </div>
+    
+        <% if (d.own) { %>
+
+            <div class="actions">
+                <a class="delete">Delete</a>                
+            </div>
+
+        <% } %>
+    
+    </div>
+
+</div>
+

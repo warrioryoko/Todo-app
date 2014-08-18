@@ -1,0 +1,38 @@
+<div class="categories">
+
+    <div class="category-column">
+        <div class="category_cards"></div>
+        <div class="category-list">
+            <% _.each(d.models, function(category) { 
+
+                //get the 'category' object from the categoryconfiguration object
+                category = category.get("category");
+
+                //get the categoryconfiguration resource for its regular 'category'
+                //object id
+                var resource_uri = sg.categories.resource_from_category_id(category.id);
+
+            %>
+
+                <div class="category card progress" category-resource="{{resource_uri}}">
+                    <div class="inner">
+                        <div class="selectable">
+                            <div class="image">
+                                <img src="https://s3.amazonaws.com/static.samegrain.com/img/categories/{{ category.name.toLowerCase() }}.png">
+                            </div>
+                            <div class="category-name">
+                                <b>{{category.name}}</b>
+                            </div>
+                        </div>
+                        <div class="updown">
+                            <img src="https://s3.amazonaws.com/static.samegrain.com/img/categories/sortable.png">
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+
+</div>
+
+<div id="cards" class="question-cards"></div>

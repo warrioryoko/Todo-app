@@ -1,0 +1,11 @@
+    <div class='sliderdiv'>
+        <div class='slider' style='height: {{d.height}}px' data-position='{{d.position}}'>
+        </div>
+    </div>
+    <div class='choices' style='margin-top: {{d.step/3}}px'>
+        <% _.each(d.grains, function(grain) { %>
+            <div class='choice' style='height: {{d.step}}px'>
+                {{grain}}
+            </div>
+        <% }); %>
+    </div>

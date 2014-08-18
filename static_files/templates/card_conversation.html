@@ -1,0 +1,34 @@
+<div id="{{d.id}}" class="card card_conversation"">
+    <div class="inner">
+
+        {{d.console}}
+
+        <div class="conversation">
+            
+            <%/*This outer div makes the scrolling work*/%>
+            <div>
+                <div class="ui comments messages scroller">
+
+                    <% if ( ! d.loaded_all_messages ) { %>
+                        <div class="load_more" style="background-color: rgb(159, 195, 37); color: white;">Load more messages</div>
+                    <% } %>
+
+                    <% _.each(d.messages, function(m) { %>
+                           {{m}}
+                    <% });  %>    
+                    
+                </div>
+            </div>
+            
+            <div class="add_to_thread">
+
+                <img class="leaf-border" src="{{d.user_image}}">
+
+                <textarea class="msg" maxlength="1000" placeholder="Post a message..." rows="2" onKeyPress="return sg.checkSubmit(this, event)"></textarea>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+

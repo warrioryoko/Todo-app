@@ -1,0 +1,29 @@
+    <div class='left-arrow'>
+        <img src='https://s3.amazonaws.com/static.samegrain.com/img/misc/arrow_left_alpha.png'>
+    </div>
+    <div class='viewport'>
+    <div class='choices'>
+        <% _.each(d.grains, function(grain) {
+
+               d.text = grain[0];
+               d.image = grain[1];
+
+               if ( _.contains(selected, d.text) )
+                   d.checked = 'selected';
+               else
+                   d.checked = '';
+        %>
+            <div class='choice {{d.checked}}' data-option="{{base64.encode(d.text).trim()}}">
+                <div class='image'>
+                    <img src='https://s3.amazonaws.com/static.samegrain.com/img/questions/{{d.image}}'/>
+                </div>
+                <div class='text'>
+                    {{d.text}}
+                </div>
+            </div>
+        <% }); %>
+    </div>
+    </div>
+    <div class='right-arrow'>
+        <img src='https://s3.amazonaws.com/static.samegrain.com/img/misc/arrow_right_alpha.png'>
+    </div>

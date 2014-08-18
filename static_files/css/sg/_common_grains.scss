@@ -1,0 +1,14 @@
+/* vim: set filetype=css sw=4 ts=4 sts=4 : */
+/****** Common Grains *****/
+
+.common {
+    line-height: 16pt;
+}
+.common-grain:nth-child(even) {
+    font-size: 12pt;
+    cursor: pointer;
+}
+.common-grain:nth-child(odd) {
+    font-size: 12pt;
+    cursor: pointer;
+}

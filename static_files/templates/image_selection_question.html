@@ -1,0 +1,21 @@
+    <div class='choices'>
+        <% _.each(d.grains, function(grain) {
+         
+               d.text = grain[0];
+               d.image = grain[1];
+
+               if ( _.contains(d.selected, d.text) )
+                   d.checked = 'selected';
+               else
+                   d.checked = '';
+        %>
+            <div class='choice {{d.checked}}' data-option="{{base64.encode(d.text).trim()}}">
+                <div class='image'>
+                    <img src='https://s3.amazonaws.com/static.samegrain.com/img/questions/{{d.image}}'/>
+                </div>
+                <div class='text'>
+                    {{d.text}}
+                </div>
+            </div>
+        <% }); %>
+    </div>

@@ -1,0 +1,20 @@
+    <center>
+        <div class="grains">
+
+		<% _.each(d.possible_answers, function(possible_answer) {
+
+            if ( _.contains(d.answers, possible_answer.id) )
+                d.addclass = "grain-bold";
+            else
+                d.addclass = "";
+        %>
+                
+           <span class="{{{d.addclass}}} grain" answer-id="{{possible_answer.id}}"
+                 possible_answer="{{{possible_answer.resource_uri}}}">
+               <img src="https://s3.amazonaws.com/static.samegrain.com/img/haker2/icon-sm_leaf.png" width="8"/>
+               {{{possible_answer.text}}}
+           </span>
+        <% }); %>
+        </div>
+    </center>
+
