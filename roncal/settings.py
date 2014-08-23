@@ -93,3 +93,10 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+HEROKU = os.environ.get('HEROKU')
+
+if HEROKU:
+    import dj_database_url
+
+    DATABASES['default'] = dj_database_url.config()
